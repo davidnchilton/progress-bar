@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="progress_bar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressBarBackground" translatesAutoresizingMaskIntoConstraints="NO" id="da1-NF-F6z">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="26i-yr-ZC8">
+                                <rect key="frame" x="106" y="446" width="202" height="4"/>
+                                <color key="tintColor" red="1" green="0.25444135270000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="LcM-OT-CYk"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzG-qW-umN" userLabel="shiftStartLabel">
+                                <rect key="frame" x="93" y="107" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="e0s-Ue-Rwl">
+                                <rect key="frame" x="80" y="155" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="shiftStartStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="O3t-MZ-HWK"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sf8-eD-Qh3">
+                                <rect key="frame" x="151" y="306" width="113" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Settings">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonMain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="usY-1R-DEd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fC3-8n-gBD" userLabel="shiftLengthLabel">
+                                <rect key="frame" x="297" y="107" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="jVr-aL-YIR">
+                                <rect key="frame" x="261" y="155" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="shiftLengthStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="aNs-Hd-OvT"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIt-cf-vRC">
+                                <rect key="frame" x="305" y="837" width="109" height="25"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change Shift hours">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="9"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yfa-im-eOL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shift start hour (24h)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzR-4a-5ai">
+                                <rect key="frame" x="55" y="74" width="145" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shift length (hours)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfk-O7-H4p">
+                                <rect key="frame" x="242" y="73" width="133" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="da1-NF-F6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0RB-Uh-yKi"/>
+                            <constraint firstAttribute="trailing" secondItem="da1-NF-F6z" secondAttribute="trailing" id="59D-gU-Kbq"/>
+                            <constraint firstItem="da1-NF-F6z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="94J-Ie-zUZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oIt-cf-vRC" secondAttribute="trailing" id="LhG-8H-YmJ"/>
+                            <constraint firstItem="26i-yr-ZC8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pZv-4V-yqJ"/>
+                            <constraint firstAttribute="bottom" secondItem="da1-NF-F6z" secondAttribute="bottom" id="qGF-Rh-Hia"/>
+                            <constraint firstItem="oIt-cf-vRC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="r1J-vU-gEr"/>
+                            <constraint firstItem="26i-yr-ZC8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xkz-GB-k3t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="sf8-eD-Qh3" id="qeR-Pd-MN3"/>
+                        <outlet property="helpLabel1" destination="lzR-4a-5ai" id="NGo-kH-zAu"/>
+                        <outlet property="helpLabel2" destination="Hfk-O7-H4p" id="hCg-fe-YXI"/>
+                        <outlet property="progressBar" destination="26i-yr-ZC8" id="cFL-gS-TcD"/>
+                        <outlet property="shiftLengthLabel" destination="fC3-8n-gBD" id="6hk-2d-FrK"/>
+                        <outlet property="shiftStartLabel" destination="XzG-qW-umN" id="Uwg-eS-by5"/>
+                        <outlet property="stepper" destination="e0s-Ue-Rwl" id="vMu-sy-VJi"/>
+                        <outlet property="stepperLength" destination="jVr-aL-YIR" id="bpX-xf-DMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="progressBarBackground" width="202.5" height="360"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
